@@ -19,7 +19,7 @@ echo "Checksum of LICENSE file in PR branch: $LICENSE_CHECKSUM"
 echo "SHA256 of LICENSE file in PR branch: $LICENSE_SHA256"
 
 # URL of the other LICENSE file to compare with
-EXTERNAL_LICENSE_URL="https://github.com/intelops/license-files/blob/main/opensource-licenses/no-restrictions/APACHE/LICENSE"
+EXTERNAL_LICENSE_URL="https://raw.githubusercontent.com/intelops/license-files/refs/heads/main/opensource-licenses/no-restrictions/APACHE/LICENSE"
 
 curl -o /tmp/external_LICENSE $EXTERNAL_LICENSE_URL
 
