@@ -1,0 +1,23 @@
+
+name: Compare LICENSE Files
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  compare-license:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the code from the PR branch
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Run the shell script to fetch, hash, and compare the LICENSE files
+    - name: Run License Comparison Script
+      run: |
+        chmod +x ./compare_license.sh
+        ./compare_license.sh ${{ github.head_ref }}
+
